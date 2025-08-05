@@ -2,10 +2,7 @@ const mongoose = require("mongoose");
 
 const connect = () => {
   mongoose
-    .connect(process.env.MONGODB, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    })
+    .connect(process.env.MONGODB)
     .then(() => console.log("MongoDB connection successful"))
     .catch((err) => {
       console.error("Connection error:", err);
@@ -14,4 +11,5 @@ const connect = () => {
 };
 
 module.exports = connect;
+
 
