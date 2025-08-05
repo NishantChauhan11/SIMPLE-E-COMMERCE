@@ -7,14 +7,14 @@
 html, body {
     width: 100%;
     height: 100%;
-    background-color: #f0f0f0;
+    background-color: #eef2f5;
     font-family: sans-serif;
 }
 
 nav {
     height: 50px;
     width: 100%;
-    background-color: red;
+    background-color: #1e3a8a; /* deep blue */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -23,18 +23,18 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: white;
-    border: 2px solid black;
+    color: #ffffff;
+    border: 2px solid #1e293b; /* dark gray-blue */
     padding: 5px 10px;
     border-radius: 10px;
     font-weight: bold;
-    background-color: black;
+    background-color: #1e293b; /* dark slate */
 }
 
 .container {
     width: 100%;
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: #f8fafc; /* soft light blue */
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -45,10 +45,10 @@ nav a {
 .card {
     height: 420px;
     width: 300px;
-    border: 2px solid black;
+    border: 2px solid #cbd5e1; /* light border */
     padding: 5px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -77,24 +77,24 @@ nav a {
 
 .card .bottom a {
     text-decoration: none;
-    color: black;
+    color: #0f172a; /* navy text */
 }
 
 .product-title {
     font-size: 18px;
-    color: black;
+    color: #1e293b; /* dark slate */
     text-align: center;
     word-break: break-word;
 }
 
 .card .bottom p {
     font-size: 14px;
-    color: #333;
+    color: #334155; /* subtle gray-blue */
     text-align: justify;
 }
 
 .product-price {
     font-size: 16px;
-    color: black;
+    color: #2563eb; /* vibrant blue */
     text-align: center;
 }
