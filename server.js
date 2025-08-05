@@ -1,19 +1,12 @@
-const app = require("./src/app");
-const connect = require("./src/db/db");
-const mongoose = require("mongoose");
-
+const express = require('express');
+const app = express();
 const PORT = process.env.PORT || 3000;
 
-connect();
-
-mongoose.connection.once("open", () => {
-  console.log("MongoDB connected");
-  app.listen(PORT, () => {
-    console.log("SERVER IS RUNNING ON PORT NO :", PORT);
-  });
+app.get("/", (req, res) => {
+    res.send("App is running!");
 });
 
-mongoose.connection.on("error", (err) => {
-  console.error("MongoDB connection error:", err);
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
 
