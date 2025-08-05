@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/productForm.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Update Product</title>
+  <link rel="stylesheet" href="/productForm.css" />
 </head>
 <body>
-    
-    <h2>Update Product</h2>
-    <form action="/products/update/<%= product._id %>" enctype="multipart/form-data" method="post">
 
-        <label for="title">Title</label><br>
-        <input type="text" name="title" placeholder="enter product title" value="<%= product.title %>"> <br><br>
+  <h2>Update Product</h2>
 
+  <form action="/products/update/<%= product._id %>" enctype="multipart/form-data" method="post">
 
-        <label for="description">Description</label><br>
-        <input type="text" name="description" placeholder="enter product description" value="<%= product.description %>"> <br><br>
+    <label for="title">Title</label><br>
+    <input type="text" name="title" placeholder="Enter product title" value="<%= product.title %>" required> <br><br>
 
-        <label for="category">Category</label><br>
-        <input type="text" name="category" placeholder="enter product category" value="<%= product.category %>"> <br><br>
+    <label for="description">Description</label><br>
+    <input type="text" name="description" placeholder="Enter product description" value="<%= product.description %>" required> <br><br>
 
-        <label for="price">Price</label><br>
-        <input type="text" name="price" placeholder="enter product price" value="<%= product.price %>"> <br><br>
+    <label for="category">Category</label><br>
+    <input type="text" name="category" placeholder="Enter product category" value="<%= product.category %>" required> <br><br>
 
-       <div class="btn">
-         <button type="submit">Submit</button>
-       </div>
+    <label for="price">Price</label><br>
+    <input type="number" name="price" step="0.01" placeholder="Enter product price" value="<%= product.price %>" required> <br><br>
 
-    </form>
+    <label for="image">Product Image (optional)</label><br>
+    <input type="file" name="image"> <br><br>
 
+    <button type="submit">Update Product</button>
+  </form>
+
+  <br>
+  <a href="/products/detail/<%= product._id %>">← Back to Product</a>
 
 </body>
 </html>
